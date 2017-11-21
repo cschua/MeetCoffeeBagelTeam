@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "chua.cs.meetcoffeebagelteam"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            postprocessing {
+                removeUnusedCode false
+                removeUnusedResources false
+                obfuscate false
+                optimizeCode false
+                proguardFile 'proguard-rules.pro'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile 'com.android.support:cardview-v7:27.+'
+    compile 'com.android.support:recyclerview-v7:27.+'
+
+    // json serialization/deserialization library
+    compile 'com.google.code.gson:gson:2.8.2'
+
+    // custom RecyclerView for CardSlider - requires min sdk 19
+    compile 'com.ramotion.cardslider:card-slider:0.1.0'
+
+    // rounded corners
+    compile 'jp.wasabeef:picasso-transformations:2.1.2'
+
+    // for custom circle imageview
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+
+    // image downloading / caching library
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // fonts
+    compile 'com.vstechlab.easyfonts:easyfonts:1.0.0'
+}

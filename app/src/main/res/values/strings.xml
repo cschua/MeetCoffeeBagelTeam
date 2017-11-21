@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MeetCoffeeBagelTeam</string>
+    <string name="welcome_title">Meet the Coffee Meets Bagel Team!</string>
+    <string name="transition_image">imageTransition</string>
+</resources>
